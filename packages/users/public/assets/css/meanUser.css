@@ -1,0 +1,63 @@
+.meanUser-example h1 {
+    background-color: purple
+}
+.login-container,
+.forgot_password_form 
+{
+    border-width: 0px;
+    background-color:rgba(23,23,45,0.8)!important;
+    color:white;
+}
+.forgot_password_form input
+{
+    color:black;
+}
+.content
+{
+    /*background-image:url('/users/assets/img/key.jpg');*/
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100%;
+    padding-top:50px;
+    margin-top:50px;
+    margin-bottom:0px;
+}
+.container
+{
+}
+input:focus,
+input,
+textarea,
+textarea:focus
+{
+    color:#000080;
+    padding:5px;
+}
+.form-containter .row {
+    padding:1em;
+}
+.form-containter .row:hover {
+    background-color: #d2d2d2;
+    font-weight: bold;
+}
+.form-containter .row label {
+    font-weight:bold;
+}
+.form-containter  input.ng-invalid ,
+.form-containter  textarea.ng-invalid {
+    border:2px solid red;
+} 
+
+.saveBtn {
+    padding:1em;
+    padding-left:3em;
+    padding-right:3em;
+    font-weight: bolder;
+}
+
+.cancelBtn {
+    padding:1em;
+    padding-left:3em;
+    padding-right:3em;
+    font-weight: bolder;
+}

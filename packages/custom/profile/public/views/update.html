@@ -1,0 +1,43 @@
+<div  data-ng-controller="ProfileController">
+    <h1> Update profile information</h1>
+    <div class='form-containter'>
+    <form name='profileForm'  novalidate >
+        <div class='row'>
+            <div  class='col-md-2 col-xs-12'>  <label>Username</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><input type='text' ng-model='user.username'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'><label>Name</label></div>
+            <div class='col-md-10  col-xs-12 editForm'><input type='text' ng-model='user.name'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'><label>Last name</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><input type='text' ng-model='user.lastName'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'><label>Email</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><input type='email' ng-model='user.email'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'>
+                <label>Profile Picture</label>
+            </div>
+            <div class='col-md-10 col-xs-12 editForm'>
+                <input type='hidden' ng-model='user.imageURL'/> <img class='profileImage' ng-src='{{user.imageFullUrl.url}}' />
+            </div>
+        </div>   
+        <div class='row'>
+            <div s3-upload='uploadd' bucket="'cdibucket'" ng-model="uploadWorking"  s3-upload-options="{getOptionsUri: 'http://localhost:3000/upload/signature', folder: '',enableValidation :true}">
+            </div>    
+        </div>
+         <div class='row'>
+            <div  class='col-md-2 col-xs-12'>  <label>Notes</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><textarea  ng-model='user.notes' class='col-xs-10' rows='5' > </textarea> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2'>  <button class='saveBtn btn  btn-success' ng-click='save()'>Save</button></div>
+            <div class='col-md-2'> <button class='cancelBtn btn btn-danger' ng-click='view()'>Cancel</button></div>
+        </div>
+    </form>  
+    </div>    
+</div>

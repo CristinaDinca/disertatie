@@ -1,0 +1,37 @@
+<div  data-ng-controller="TrainingController">
+    <h1> Training carete</h1>
+    <div class='form-containter'>
+    <form name='profileForm'  novalidate >
+        <div class='row'>
+            <div  class='col-md-2 col-xs-12'>  <label>Title</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><input type='text' ng-model='training.title'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'><label>Short description</label></div>
+            <div class='col-md-10  col-xs-12 editForm'><input type='text' ng-model='training.short_description'/> </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'><label>Description</label></div>
+            <div class='col-md-10 col-xs-12 editForm'><textarea type='text' ng-model='training.description'></textarea> </div>
+        </div>
+       
+        <div class='row'>
+            <div class='col-md-2 col-xs-12'>
+                <label>Files</label>
+            </div>
+            <div class='col-md-10 col-xs-12 editForm' ng-repeat="file in training.mediaURL">
+                <input type='hidden' ng-model='file.imageURL'/> <img class='profileImage' ng-src='{{file.imageFullUrl.url}}' />
+            </div>
+        </div>   
+        <div class='row'>
+            <div s3-upload='uploadd' bucket="'cdibucket'" ng-model="uploadWorking"  s3-upload-options="{getOptionsUri: 'http://localhost:3000/upload/signature', folder: '',enableValidation :true}">
+            </div>    
+        </div>
+        
+        <div class='row'>
+            <div class='col-md-2'>  <button class='saveBtn btn  btn-success' ng-click='save()'>Save</button></div>
+            <div class='col-md-2'> <button class='cancelBtn btn btn-danger' ng-click='view()'>Cancel</button></div>
+        </div>
+    </form>  
+    </div>    
+</div>

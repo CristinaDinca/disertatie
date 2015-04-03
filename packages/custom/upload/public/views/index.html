@@ -1,0 +1,14 @@
+<div class="" data-ng-controller="UploadController">
+  <h1>Example view from your new awesome package</h1>
+  <h2>Package: {{package.name}}</h2>
+  <ul>
+      <li ng-repeat="file in files"><a target='_blank' href='{{file.path}}'>{{file.fileName}}</a> <button ng-click="deleteFile(file.fileName)">Delete</button></li>
+  </ul>
+  here begins
+  <div s3-upload='uploadd' bucket="'cdibucket'" ng-model="uploadWorking"  s3-upload-options="{getOptionsUri: 'http://localhost:3000/upload/signature', folder: '',enableValidation :true}">
+  filename {{filename}}
+  {{uploadd|json}}
+  <!--</body>-->
+<!--</html>-->
+</div>
+

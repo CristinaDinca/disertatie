@@ -1,0 +1,39 @@
+
+
+.profile-example .profile-top {
+    border-bottom:1px solid purple;
+    
+}
+
+* {    
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.profile-image {
+    padding:0px;
+    margin:0px;
+    
+}
+.profile-note {
+    height:100px;
+    overflow-y:scroll;
+}
+.profileImage {
+    width:100px;
+    height:100px;
+    margin:0px;
+    padding:0px;
+    border:1px solid #333333;
+}
+
+.updateIcon {
+ 
+    /*float:right;*/
+}
+.updateIcon a i{
+       font-size: 25px;
+}
+form editForm
+{
+    text-align:left;
+}
